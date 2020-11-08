@@ -1,6 +1,6 @@
 package br.com.gabrielDias.desafioDeliverIt.dto;
 
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,17 +11,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AccountDTO {
 	
-	private Integer id;
+	private Long id;
 
 	private String name;
 	
 	private Double originalValue;
 	
-	private ZonedDateTime expirationDate;
+	private Double value;
 	
-	private ZonedDateTime paymentDate;
+	private LocalDateTime expirationDate;
 	
-	private Integer daysDelay;
+	private LocalDateTime paymentDate;
+	
+	private Long daysDelay;
 	
 	private Double fined;
 	

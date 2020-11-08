@@ -26,13 +26,13 @@ public class AccountController {
 	private AccountInterface accountInterface;
 	
 	@GetMapping(value = "account/list", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<AccountsResponseDTO> getPautaResultado() throws Exception {
+	public ResponseEntity<AccountsResponseDTO> getAccounts() throws Exception {
 
 		return ResponseEntity.status(HttpStatus.OK).contentType(MediaType.APPLICATION_JSON).body(accountInterface.getAccounts());
 	}
 	
 	@PostMapping(value = "account", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<AccountDTO> postPauta(@RequestBody @Valid AccountRequestDTO accountRequestDTO) throws Exception {
+	public ResponseEntity<AccountDTO> postAccount(@RequestBody @Valid AccountRequestDTO accountRequestDTO) throws Exception {
 
 		return ResponseEntity.status(HttpStatus.OK).contentType(MediaType.APPLICATION_JSON).body(accountInterface.postAccount(accountRequestDTO));
 	}

@@ -1,7 +1,7 @@
 package br.com.gabrielDias.desafioDeliverIt.entity;
 
 import java.io.Serializable;
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,7 +28,7 @@ public class AccountEntity implements Serializable{
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ACCOUNT_ID_SEQ")
 	@SequenceGenerator(name = "ACCOUNT_ID_SEQ", sequenceName = "ACCOUNT_ID_SEQ", allocationSize = 1)
 	@Column(name = "ACCOUNT_ID")
-	private Integer id;
+	private Long id;
 
 	@Column(name = "NAME")
 	private String name;
@@ -37,13 +37,13 @@ public class AccountEntity implements Serializable{
 	private Double originalValue;
 	
 	@Column(name = "EXPIRATION_DATE")
-	private ZonedDateTime expirationDate;
+	private LocalDateTime expirationDate;
 	
 	@Column(name = "PAYMENT_DATE")
-	private ZonedDateTime paymentDate;
+	private LocalDateTime paymentDate;
 	
 	@Column(name = "DAYS_DELAY")
-	private Integer daysDelay;
+	private Long daysDelay;
 	
 	@Column(name = "FINED")
 	private Double fined;
