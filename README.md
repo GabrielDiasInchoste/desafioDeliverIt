@@ -10,7 +10,7 @@ Necessario executar o Docker-Compose para baixar a imagem do Banco Oracle.
 
 -- docker-compose up -d.
 
-Apos baixar a imagem é necessario criar o Usuario Desafio para a aplicaçao utilizar.
+Apos baixar a imagem é necessario criar o Usuario desafioDeliverIt para a aplicaçao utilizar.
 
 -- alter session set "_ORACLE_SCRIPT"=true;
 
